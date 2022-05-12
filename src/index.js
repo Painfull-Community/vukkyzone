@@ -8,7 +8,7 @@ module.exports = {
 				return ["💥"].includes(reaction.emoji.name) && user.bot == false;
 			};
             
-			vukkyzone.awaitReactions(filter, { max: 1 })
+			vukkyzone.awaitReactions({filter, max: 1 })
 				.then(collected => {
 					const reaction = collected.first();
 					var userCount = vukkyzone.reactions.cache.get("✨").count - 1;
