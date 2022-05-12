@@ -1,0 +1,16 @@
+{
+    "name": "vukkyzone",
+    "version": "1.0.0",
+    "description": "Vukky Zone port for the Painfull bot",
+    "main": "src/index.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Painfull-Community/pagepeeker.git"
+    },
+    "author": "Vukky",
+    "license": "UNLICENCED",
+    "bugs": {
+      "url": "https://github.com/Painfull-Community/pagepeeker/issues"
+    },
+    "homepage": "https://github.com/Painfull-Community/pagepeeker#readme"
+}
