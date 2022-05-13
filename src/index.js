@@ -16,26 +16,26 @@ module.exports = {
 					reaction.remove();
 					randomEvent = Math.round(Math.random()) * 3;
 					console.log(`Random event ID: ${randomEvent}`);
-					vukkyzone.edit("🤔 Something very bad is happening to the Vukky Zone...\nReact with ✨ to join.");
+					vukkyzone.edit(cls.getString("vukkyzone", "intro")); 
 					setTimeout(() => { 
-						vukkyzone.edit("😮 The Vukky Zone suddenly started shaking...\nReact with ✨ to join.");
+						vukkyzone.edit(cls.getString("vukkyzone", "shake"));
 					}, 8000);
 					setTimeout(() => { 
 						userCount = vukkyzone.reactions.cache.get("✨").count - 1;
-						vukkyzone.edit("😬 The entrance to the Vukky Zone was suddenly closed!");
+						vukkyzone.edit(cls.getString("vukkyzone", "closed"));
 						vukkyzone.reactions.removeAll();
 					}, 12000);
 					setTimeout(() => {  
 						if(userCount == 0) {
-							vukkyzone.edit("😶 Not much happened, because no one decided to join."); 
+							vukkyzone.edit(cls.getString("vukkyzone", "empty")); 
 						} else if(randomEvent == 0) {
-							vukkyzone.edit(`💥 **Boom!**\nThe Vukky Zone was blown up!\n${userCount} people died inside it, because they decided to join.`); 
+							vukkyzone.edit(cls.getString("vukkyzone", "explode")).replace("{0}", userCount); 
 						} else if (randomEvent == 1) {
-							vukkyzone.edit(`🦠 **cough cough**\nThe Vukky Zone was closed due to COVID-19!\n${userCount} people got a severe case and died...`); 
+							vukkyzone.edit(cls.getString("vukkyzone", "covid")).replace("{0}", userCount); 
 						} else if (randomEvent == 2) {
-							vukkyzone.edit(`🔨 **C R A S H**\nAn anvil suddenly fell down and killed ${userCount} people inside the Vukky Zone.`);
+							vukkyzone.edit(cls.getString("vukkyzone", "anvil")).replace("{0}", userCount); 
 						} else {
-							vukkyzone.edit(`🦆 **HONK**\nA wild goose appeared!\n${userCount} people were scared to death.`);
+							vukkyzone.edit(cls.getString("vukkyzone", "goose")).replace("{0}", userCount); 
 						}
 						vukkyzone.reactions.removeAll();
 					}, 18000);

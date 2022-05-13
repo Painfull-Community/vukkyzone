@@ -2,7 +2,15 @@
     "moduleName": "vukkyzone",
     "locals": {
         "en": {
-            "intro": "**Welcome to the Vukky Zone!** (started by <@{0}>)\nReact with ✨ to join the Vukky Zone, or 💥 to close it so no one can enter it anymore."
+            "intro": "**Welcome to the Vukky Zone!** (started by <@{0}>)\nReact with ✨ to join the Vukky Zone, or 💥 to close it so no one can enter it anymore.",
+            "start": "🤔 Something very bad is happening to the Vukky Zone...\nReact with ✨ to join.",
+            "shake": "😮 The Vukky Zone suddenly started shaking...\nReact with ✨ to join.",
+            "closed": "😬 The entrance to the Vukky Zone was suddenly closed!",
+            "empty": "😶 Not much happened, because no one decided to join.",
+            "explode": "💥 **Boom!**\nThe Vukky Zone was blown up!\n{0} people died inside it, because they decided to join.",
+            "covid": "🦠 **cough cough**\nThe Vukky Zone was closed due to COVID-19!\n{0} people got a severe case and died...",
+            "anvil": "🔨 **C R A S H**\nAn anvil suddenly fell down and killed {0} people inside the Vukky Zone.",
+            "goose": "🦆 **HONK**\nA wild goose appeared!\n{0} people were scared to death."
         }
     } 
 }
