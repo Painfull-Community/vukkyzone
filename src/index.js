@@ -1,8 +1,9 @@
 module.exports = {
-    execute: function (message, args) {
+    execute: function (message, args, utils) {
         var randomEvent;
+		var cls = utils.apis["core-cls"].api
 		message.delete();
-		message.channel.send(`**Welcome to the Vukky Zone!** (started by <@${message.author.id}>)\nReact with ✨ to join the Vukky Zone, or 💥 to close it so no one can enter it anymore.`).then(vukkyzone => {
+		message.channel.send(cls.getString("vukkyzone", "intro").replace("{0}", message.author.id)).then(vukkyzone => {
 			vukkyzone.react("✨").then(() => vukkyzone.react("💥"));
 			const filter = (reaction, user) => {
 				return ["💥"].includes(reaction.emoji.name) && user.bot == false;
