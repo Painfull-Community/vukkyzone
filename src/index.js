@@ -29,13 +29,13 @@ module.exports = {
 						if(userCount == 0) {
 							vukkyzone.edit(cls.getString("vukkyzone", "empty")); 
 						} else if(randomEvent == 0) {
-							vukkyzone.edit(cls.getString("vukkyzone", "explode")).replace("{0}", userCount); 
+							vukkyzone.edit(cls.getString("vukkyzone", "explode").replace("{0}", userCount)); 
 						} else if (randomEvent == 1) {
-							vukkyzone.edit(cls.getString("vukkyzone", "covid")).replace("{0}", userCount); 
+							vukkyzone.edit(cls.getString("vukkyzone", "covid").replace("{0}", userCount)); 
 						} else if (randomEvent == 2) {
-							vukkyzone.edit(cls.getString("vukkyzone", "anvil")).replace("{0}", userCount); 
+							vukkyzone.edit(cls.getString("vukkyzone", "anvil").replace("{0}", userCount)); 
 						} else {
-							vukkyzone.edit(cls.getString("vukkyzone", "goose")).replace("{0}", userCount); 
+							vukkyzone.edit(cls.getString("vukkyzone", "goose").replace("{0}", userCount)); 
 						}
 						vukkyzone.reactions.removeAll();
 					}, 18000);
